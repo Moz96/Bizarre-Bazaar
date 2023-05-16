@@ -1,6 +1,7 @@
 <h1>Welcome to the Bizarre Bazaar!</h1>
 <h2>The home of dysfunctional items</h2>
-<%= render 'filter_bar' %>
 
 <h3>Look at all these crazy items:<h3>
-<%= render 'item_card' %>
+<% @items.each do |item| %>
+  <%= render partial: 'item_card', locals: { item: item }  %>
+<% end %>

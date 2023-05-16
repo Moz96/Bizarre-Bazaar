@@ -1,7 +1,3 @@
-body {
-  background-color: white;
-}
-
 .container {
   background-color: white;
   padding: 0.8rem;
@@ -10,7 +6,7 @@ body {
 
 .image {
   height: 14rem;
-  background-image: url("/app/assets/images/inspiration/AirBnB_item_card.png");
+  background-image: asset-url('inspiration/AirBnB_item_card.png');
   background-size: cover;
   border-radius: 1rem;
 }

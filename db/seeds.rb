@@ -5,22 +5,23 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-puts "cleaning database"
+puts "Cleaning database"
 
 Booking.destroy_all
 Item.destroy_all
 User.destroy_all
 
+puts "Creating database"
 
-puts "creating database"
-User.create(
+# Create users
+user1 = User.create(
   email: "user1@example.com",
   password: "password",
   first_name: "John",
   last_name: "Doe"
 )
 
-User.create(
+user2 = User.create(
   email: "user2@example.com",
   password: "password",
   first_name: "Jane",
@@ -28,31 +29,31 @@ User.create(
 )
 
 # Create items
-Item.create(
+item1 = Item.create(
   name: "Item 1",
   price: 10,
   description: "This is item 1's description",
-  user_id: 19,
+  user: user1
 )
 
-Item.create(
+item2 = Item.create(
   name: "Item 2",
   price: 15,
   description: "This is item 2's description",
-  user_id: 20,
+  user: user2
 )
 
 # Create bookings
 Booking.create(
-  user_id: ,
-  item_id: 2
+  user: user1,
+  item: item2
 )
 
 Booking.create(
-  user_id: 19,
-  item_id: 1
+  user: user2,
+  item: item1
 )
 
-puts "users #{User.count}"
-puts "created #{Item.count} items"
-puts "bookings #{Booking.count}"
+puts "Users count: #{User.count}"
+puts "Items count: #{Item.count}"
+puts "Bookings count: #{Booking.count}"

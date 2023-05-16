@@ -1,1 +1,6 @@
 // Specific CSS for your home-page
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 5rem;
+}

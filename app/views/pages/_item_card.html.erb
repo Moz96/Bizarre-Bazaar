@@ -1,6 +1,8 @@
-<div class="container">
-  <div class="image"></div>
-  <h3 class="item-card-title"><%= item[:name] %></h3>
-  <p class="item-card-description"><%= item[:description] %></p>
-  <p class="item-card-price"><%= item[:price] %> total</p>
-</div>
+<a href="<%= item_path(item[:id]) %>" >
+  <div class="container">
+    <div class="image"></div>
+    <h3 class="item-card-title"><%= item[:name] %></h3>
+    <p class="item-card-description"><%= item[:description] %></p>
+    <p class="item-card-price">£<%= item[:price] %></p>
+  </div>
+</a>

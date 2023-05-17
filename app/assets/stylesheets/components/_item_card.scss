@@ -1,16 +1,16 @@
-body {
-  background-color: white;
+a {
+  text-decoration: none;
 }
 
 .container {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 0.8rem;
   width: 15rem;
 }
 
 .image {
   height: 14rem;
-  background-image: url("/app/assets/images/inspiration/AirBnB_item_card.png");
+  background-image: asset-url('inspiration/AirBnB_item_card.png');
   background-size: cover;
   border-radius: 1rem;
 }

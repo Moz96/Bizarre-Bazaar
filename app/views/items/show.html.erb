@@ -1,4 +1,7 @@
 <div class="position relative">
   <h2> <%= @item.name %> </h2>
+  <h4> £<%= @item.price%> </h4>
+  <p> <%= @item.description%> </p>
+  <p>Buy from: <%= @item.user.first_name %> <%= @item.user.last_name %></p>
    <%= link_to "Book this item", item_booking_path(@item), class: "btn btn-secondary" %>
 </div>

@@ -13,6 +13,8 @@ User.destroy_all
 
 print "Filling database"
 
+categories = ["Useless", "Really Useless", "Too Tall", "Too Small", "Crunchy", "Pink"]
+
 # Create users
 21.times do |i|
   print "."
@@ -28,7 +30,8 @@ print "Filling database"
     name: "Item #{i + 1}",
     price: rand(1..500),
     description: "This is item #{i + 1}'s description",
-    user: user
+    user: user,
+    category: categories.sample
   )
 
   # Create bookings

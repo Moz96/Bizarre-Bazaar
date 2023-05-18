@@ -6,11 +6,13 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
+    puts "@item: #{@item}"
   end
 
   def create
     @item = Item.new(item_params)
-    if @item.save
+    @item.user = current_user
+    if @item.save!
       redirect_to root_path
     else
       flash.now[:alert] = 'Item could not be created'

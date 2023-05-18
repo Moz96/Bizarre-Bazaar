@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_item, only: [:new, :create]
+  before_action :set_item, only: [:new, :create, :show]
   before_action :set_booking, only: [:show, :destroy]
 
   def new

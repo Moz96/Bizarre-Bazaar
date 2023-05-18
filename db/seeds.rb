@@ -46,12 +46,12 @@ item2 = Item.create(
 # Create bookings
 Booking.create(
   user: user1,
-  item: item2
+  item: item1
 )
 
 Booking.create(
   user: user2,
-  item: item1
+  item: item2
 )
 
 puts "Users count: #{User.count}"

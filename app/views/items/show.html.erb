@@ -1,5 +1,6 @@
 <div class="position relative">
   <%= link_to "Back to Home", root_path %>
+  <%= cl_image_tag @item.photo.key, height: 300, width: 400, crop: :fill %>
   <h2> <%= @item.name %> </h2>
   <h4> £<%= @item.price%> </h4>
   <p> <%= @item.description%> </p>

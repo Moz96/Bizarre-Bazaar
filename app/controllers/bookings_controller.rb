@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   before_action :set_item, only: [:new, :create, :show]
   before_action :set_booking, only: [:show, :destroy]
+  before_action :authenticate_user!, only: [:new, :create]
 
   def new
     @booking = @item.bookings.new
@@ -17,6 +18,11 @@ class BookingsController < ApplicationController
   end
 
   def show
+    if user_signed_in?
+      render 'show'
+    else
+      redirect_to new_user_session_path, alert: 'You need to sign in to book this item.'
+    end
   end
 
   def destroy

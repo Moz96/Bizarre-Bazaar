@@ -3,17 +3,22 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :destroy]
   before_action :authenticate_user!, only: [:new, :create]
 
+  def index
+    @bookings = current_user.bookings
+  end
+
   def new
     @booking = @item.bookings.new
   end
 
   def create
-    @booking = @item.bookings.new(booking_params)
+    @booking = @item.bookings.new
+    @booking.user = current_user
     if @booking.save
       redirect_to item_booking_path(@item, @booking), notice: 'Booking was successfully created.'
     else
       flash.now[:alert] = 'Booking could not be created.'
-      render :new
+      redirect_to root_path
     end
   end
 

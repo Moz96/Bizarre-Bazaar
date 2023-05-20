@@ -1,0 +1,11 @@
+<%= link_to 'Back to Item', item_path(@booking.item) %>
+
+<%= form_with(model: [@booking, @review], url: item_booking_reviews_path(@booking.item, @booking)) do |form| %>
+  <%= form.label :rating %>
+  <%= form.number_field :rating %>
+
+  <%= form.label :comment %>
+  <%= form.text_area :comment %>
+
+  <%= form.submit 'Submit Review' %>
+<% end %>

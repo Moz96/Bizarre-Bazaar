@@ -26,18 +26,12 @@ categories = ["Useless", "Really Useless", "Too Tall", "Too Small", "Crunchy", "
   )
 
   # Create items
-  item = Item.create(
+  Item.create(
     name: "Item #{i + 1}",
     price: rand(1..500),
     description: "This is item #{i + 1}'s description",
     user: user,
     category: categories.sample
-  )
-
-  # Create bookings
-  Booking.create(
-    user: user,
-    item: item
   )
 end
 

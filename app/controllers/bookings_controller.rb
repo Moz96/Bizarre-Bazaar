@@ -9,11 +9,13 @@ class BookingsController < ApplicationController
 
   def create
     @booking = @item.bookings.new
+    @booking.user = current_user
+    # raise
     if @booking.save
       redirect_to item_booking_path(@item, @booking), notice: 'Booking was successfully created.'
     else
       flash.now[:alert] = 'Booking could not be created.'
-      render :new
+      redirect_to root_path
     end
   end
 

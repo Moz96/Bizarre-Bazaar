@@ -7,7 +7,6 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    puts "@item: #{@item}"
   end
 
   def create

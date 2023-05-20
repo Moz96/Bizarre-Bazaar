@@ -51,6 +51,8 @@ gem "sassc-rails"
 # Faker to help seed the databse
 gem "faker"
 
+# OpenAI to seed items with text and images
+gem "ruby-openai"
 # User image storage
 gem "cloudinary"
 

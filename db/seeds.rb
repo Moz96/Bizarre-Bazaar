@@ -11,49 +11,40 @@ Booking.destroy_all
 Item.destroy_all
 User.destroy_all
 
-puts "Creating database"
+print "Filling database"
+
+categories = ["Useless", "Really Useless", "Too Tall", "Too Small", "Crunchy", "Pink"]
 
 # Create users
-user1 = User.create(
-  email: "user1@example.com",
-  password: "password",
-  first_name: "John",
-  last_name: "Doe"
-)
+21.times do |i|
+  print "."
+  user = User.create(
+    email: "user#{i + 1}@example.com",
+    password: "password",
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name
+  )
 
-user2 = User.create(
-  email: "user2@example.com",
-  password: "password",
-  first_name: "Jane",
-  last_name: "Smith"
-)
+  # Create items
+  item = Item.create(
+    name: "Item #{i + 1}",
+    price: rand(1..500),
+    description: "This is item #{i + 1}'s description",
+    user: user,
+    category: categories.sample
+  )
 
-# Create items
-item1 = Item.create(
-  name: "Item 1",
-  price: 10,
-  description: "This is item 1's description",
-  user: user1
-)
+  # Create bookings
+  Booking.create(
+    user: user,
+    item: item
+  )
+end
 
-item2 = Item.create(
-  name: "Item 2",
-  price: 15,
-  description: "This is item 2's description",
-  user: user2
-)
-
-# Create bookings
-Booking.create(
-  user: user1,
-  item: item2
-)
-
-Booking.create(
-  user: user2,
-  item: item1
-)
-
+puts "\n"
+puts "\n"
+puts "\e[32m--Done!--\e[0m"
 puts "Users count: #{User.count}"
 puts "Items count: #{Item.count}"
 puts "Bookings count: #{Booking.count}"
+puts "\n"

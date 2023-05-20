@@ -2,6 +2,8 @@
 <h2>The home of dysfunctional items</h2>
 <h3>Look at all these crazy items:</h3>
 
+<%= render partial: 'navbar' %>
+
 <%= render partial: 'category_bar' %>
 <% if user_signed_in? %>
   <%= link_to "Sign Out", destroy_user_session_path, data: { turbo: true, turbo_method: :delete } %>

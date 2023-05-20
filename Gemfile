@@ -51,13 +51,10 @@ gem "sassc-rails"
 # Faker to help seed the databse
 gem "faker"
 
-<<<<<<< HEAD
 # OpenAI to seed items with text and images
 gem "ruby-openai"
-=======
 # User image storage
 gem "cloudinary"
->>>>>>> 6473eb88ede9c160e78ba7523305c74b39d9c309
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"

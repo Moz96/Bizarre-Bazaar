@@ -1,8 +1,8 @@
-  <div class="category-bar">
-    <ul class="category-list">
-      <li><a href="/">ALL</a></li>
-      <% @categories.each do |category| %>
-        <li><%= link_to category, root_path(category: category) %></li>
-      <% end %>
-    </ul>
-  </div>
+<div class="category-bar">
+  <ul id="category-list" class="category-list">
+    <li><a href="/">ALL</a></li>
+    <% @categories.each do |category| %>
+      <li><%= link_to category, root_path(category: category) %></li>
+    <% end %>
+  </ul>
+</div>

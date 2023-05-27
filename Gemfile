@@ -18,6 +18,9 @@ gem "puma", "~> 5.0"
 # Devise for authentication
 gem "devise"
 
+gem "geocoder"
+
+
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem "jsbundling-rails"
 

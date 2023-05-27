@@ -8,12 +8,19 @@ a {
   width: 15rem;
 }
 
+.item-card-container {
+  border: 1px solid black;
+}
+
 .image {
-  height: 14rem;
+  height: 10rem;
   // background-image: asset-url('inspiration/AirBnB_item_card.png');
   background-size: cover;
-  border-radius: 1rem;
+  border: solid black;
+  border-width: 0px 0px 1px 0px;
 }
+
+.item-card-details-con
 
 .item-card-title {
   margin: 0.3rem;
@@ -32,3 +39,18 @@ a {
 .item-card-price {
   text-decoration: underline;
 }
+
+/* Item card */
+
+
+// box-sizing: border-box;
+
+// position: absolute;
+// width: 431px;
+// height: 264px;
+// left: 39px;
+// top: 674px;
+
+// border-width: 1px 1px 1px 0px;
+// border-style: solid;
+// border-color: #000000;

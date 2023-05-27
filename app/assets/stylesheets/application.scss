@@ -14,3 +14,7 @@
 @import "components/button";
 @import "components/header_and_navbar";
 @import "pages/index";
+
+* {
+  font-family: $headers-font;
+}

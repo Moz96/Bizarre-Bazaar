@@ -1,16 +1,18 @@
-<%= link_to "Back to Home", root_path %>
-<h1>Booking Details</h1>
+<div class="container">
+  <%= link_to "Back to Home", root_path %>
+  <h1>Booking Details</h1>
 
-<p>Hi <%= @booking.user.first_name %> <%= @booking.user.last_name %>,</p>
-<p>Here's your booking confirmation. It will also be sent to your email.</p>
+  <p>Hi <%= @booking.user.first_name %> <%= @booking.user.last_name %>,</p>
+  <p>Here's your booking confirmation. It will also be sent to your email.</p>
 
-<div>
-  <h2>Booking Overview</h2>
-  <ul>
-    <li><strong>Item Name:</strong> <%= @booking.item.name %></li>
-    <li><strong>Price:</strong> £<%= @booking.item.price %></li>
-    <li><strong>Description:</strong> <%= @booking.item.description %></li>
-  </ul>
+  <div>
+    <h2>Booking Overview</h2>
+    <ul>
+      <li><strong>Item Name:</strong> <%= @booking.item.name %></li>
+      <li><strong>Price:</strong> £<%= @booking.item.price %></li>
+      <li><strong>Description:</strong> <%= @booking.item.description %></li>
+    </ul>
+  </div>
+
+  <%= link_to 'Add Review', new_item_booking_review_path(@item, @booking) %>
 </div>
-
-<%= link_to 'Add Review', new_item_booking_review_path(@item, @booking) %>

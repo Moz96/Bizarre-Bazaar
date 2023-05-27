@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = @item.bookings.new
+    @booking.start_date = params[:start_date] if params[:start_date].present?
   end
 
   def create

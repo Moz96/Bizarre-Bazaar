@@ -20,7 +20,11 @@ a {
   border-width: 0px 0px 1px 0px;
 }
 
-.item-card-details-con
+.item-card-details-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.2rem;
+}
 
 .item-card-title {
   margin: 0.3rem;
@@ -37,7 +41,7 @@ a {
 }
 
 .item-card-price {
-  text-decoration: underline;
+
 }
 
 /* Item card */

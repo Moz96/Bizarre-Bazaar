@@ -1,12 +1,16 @@
-.button {
+.button-navbar {
   padding: 0.7rem;
   margin: 0;
   background-color: darkgray;
   box-shadow: 3px 3px 0px #FFC700;
+  font-size: 1.2rem;
   font-weight: 600;
   color: white;
 }
 
-.button:hover {
+.button-navbar:active {
+  box-shadow: 5px 5px 0px #FFC700;
+}
+.button-navbar:hover {
   box-shadow: 5px 5px 0px #FFC700;
 }

@@ -12,10 +12,11 @@
 @import "components/item_card";
 @import "components/category_bar";
 @import "components/button";
+@import "components/button_navbar";
 @import "components/header_and_navbar";
 @import "pages/index";
 
 // Fonts
-h1, h2, h3, h4, h5, h6 {
+li, p, h1, h2, h3, h4, h5, h6 {
   font-family: $headers-font;
 }

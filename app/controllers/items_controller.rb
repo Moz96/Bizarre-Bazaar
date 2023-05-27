@@ -22,7 +22,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
     @reviews = @item.reviews
   end
 
@@ -46,7 +45,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :price, :description, :photo)
+    params.require(:item).permit(:name, :price, :description, :category, :photo)
   end
 
   def set_item

@@ -2,15 +2,16 @@
 
 <%= render partial: 'category_bar' %>
 
+<div class="main-container">
+  <div class="item-grid">
+    <% @items.each do |item| %>
+      <%= render partial: 'item_card', locals: { item: item }  %>
+    <% end %>
+  </div>
 
-<div class="item-grid">
-  <% @items.each do |item| %>
-    <%= render partial: 'item_card', locals: { item: item }  %>
-  <% end %>
-</div>
-
-<div data-controller="map"
-     data-map-markers-value="<%= @markers.to_json %>"
-     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-     id='map' style="width: 100%; height: 600px;">
+  <div data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+      id='map' style="width: 100%; height: 600px;">
+  </div>
 </div>

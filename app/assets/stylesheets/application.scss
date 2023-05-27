@@ -19,3 +19,75 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: $headers-font;
 }
+.popup-content {
+  position: relative;
+  background-color: #ebebeb;
+  padding: 0px;
+  padding: 0px 0px 0px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  overflow: hidden; /* Add this line */
+}
+
+.popup-content h1 {
+  font-size: 20px;
+  color: #ff3366;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  padding: 5px;
+}
+
+.popup-content h2 {
+  font-size: 16px;
+  color: #3377ff;
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.popup-content p {
+  font-size: 14px;
+  color: #888888;
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.popup-content img {
+  max-width: 100%;
+  max-height: 75%;
+  border-radius: 4px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 24px;
+  color: #999999;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+
+.mapboxgl-popup-content {
+  object-fit: contain;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  padding: 0px 0px 0px;
+  pointer-events: auto;
+  position: relative;
+}
+
+.mapboxgl-popup-close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 24px;
+  color: #999999;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: #ff3366;
+}

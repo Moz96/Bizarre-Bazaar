@@ -1,4 +1,5 @@
 <div class="container">
+ <%= link_to "Back to Home", root_path %>
   <div class="header">
   <h1> Bizarre Bazaar </h1>
   </div>
@@ -7,6 +8,7 @@
     <div>
       <h3><%= booking.item.name %></h3>
       <p><%= booking.item.description %></p>
+      <%= cl_image_tag booking.item.photo.key, height: 300, width: 400, crop: :fill %>
     </div>
   <% end %>
 </div>

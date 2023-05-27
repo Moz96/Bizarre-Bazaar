@@ -7,5 +7,13 @@ class PagesController < ApplicationController
     else
       @items = Item.all
     end
+    @items = Item.all
+    @markers = @items.geocoded.map do |item|
+      {
+        lng: item.longitude,
+        lat: item.latitude,
+        info_window: "<h1>Hello</h1>"
+      }
+    end 
   end
 end

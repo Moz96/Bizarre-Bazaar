@@ -4,12 +4,6 @@ class ItemsController < ApplicationController
   skip_before_action :authenticate_user!, only: :show
   def index
     @items = Item.all
-
-    @markers = @items.geocoded.map do |item|
-      {
-        lat: item.latitude,
-        lng: item.longitude
-      }
   end
 
   def new

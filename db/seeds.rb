@@ -39,18 +39,17 @@ Item.create(
   description: "These chairs are so small that they can barely be seen with the naked eye, let alone be sat upon. Each chair requires a pair of tweezers to move or arrange, making them completely useless for any practical purpose.",
   user: users.sample,
   category: "Too Small",
-  latitude: 48.8649574,
-  longitude: 2.3800617, 
   address: "London"
 )
 
-# Item.create(
-#   name: "Giraffe Umbrella",
-#   price: rand(1..500),
-#   description: "A 12-foot tall umbrella designed to shield giraffes from the rain. Humans will find it nearly impossible to use without assistance, but it makes for a great addition to any giraffe-enthusiast's collection.",
-#   user: users.sample,
-#   category: "Too Tall"
-# )
+Item.create(
+  name: "Giraffe Umbrella",
+  price: rand(1..500),
+  description: "A 12-foot tall umbrella designed to shield giraffes from the rain. Humans will find it nearly impossible to use without assistance, but it makes for a great addition to any giraffe-enthusiast's collection.",
+  user: users.sample,
+  category: "Too Tall",
+  address: "Paris"
+)
 
 # Item.create(
 #   name: "Bubble Wrap Wallpaper",

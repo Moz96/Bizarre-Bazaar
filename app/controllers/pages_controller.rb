@@ -12,8 +12,9 @@ class PagesController < ApplicationController
       {
         lng: item.longitude,
         lat: item.latitude,
-        info_window: "<h1>Hello</h1>"
+        info_window_html: render_to_string(partial: "items/info_window",  locals: {item: item})
       }
     end 
   end
 end
+  
